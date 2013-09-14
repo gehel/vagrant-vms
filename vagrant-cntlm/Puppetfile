@@ -1,0 +1,45 @@
+# This is currently a noop but will be supported in the future.
+forge 'forge.puppetlabs.com'
+
+mod 'cntlm',
+  :git => 'git@github.com:gehel/puppet-cntlm.git'
+
+mod 'stdlib',
+  :git => 'git@github.com:puppetlabs/puppetlabs-stdlib.git'
+
+mod 'firewall',
+  :git => 'git@github.com:example42/puppet-firewall.git'
+
+mod 'iptables',
+  :git => 'git@github.com:example42/puppet-iptables.git'
+
+mod 'icinga',
+  :git => 'git@github.com:example42/puppet-icinga.git'
+
+mod 'yum',
+  :git => 'git@github.com:example42/puppet-yum.git'
+
+mod 'nagios',
+  :git => 'git@github.com:example42/puppet-nagios.git'
+
+mod 'nrpe',
+  :git => 'git@github.com:example42/puppet-nrpe.git'
+
+mod 'sudo',
+  :git => 'git@github.com:example42/puppet-sudo.git'
+
+mod 'apt',
+  :git => 'git@github.com:example42/puppet-apt.git'
+
+mod 'mysql',
+  :git => 'git@github.com:example42/puppet-mysql.git'
+
+mod 'apache',
+  :git => 'git@github.com:example42/puppet-apache.git'
+
+mod 'monitor',
+  :git => 'git@github.com:example42/puppet-monitor.git'
+
+mod 'puppi',
+  :git => 'git@github.com:example42/puppi.git'
+
