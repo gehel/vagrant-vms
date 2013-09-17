@@ -1,0 +1,25 @@
+# This is currently a noop but will be supported in the future.
+forge 'forge.puppetlabs.com'
+
+mod 'jenkins',
+  :git => 'git@github.com:gehel/puppet-jenkins.git'
+  :reg => 'plugin_config'
+
+mod 'jenkins_jobs',
+  :git => 'git@github.com:gehel/puppet-jenkins.git'
+
+mod 'apt',
+  :git => 'git@github.com:puppetlabs/puppetlabs-apt.git'
+
+mod 'stdlib',
+  :git => 'git@github.com:puppetlabs/puppetlabs-stdlib.git'
+
+mod 'puppi',
+  :git => 'git@github.com:example42/puppi.git'
+
+mod 'yum',
+  :git => 'git@github.com:example42/puppet-yum.git'
+
+mod 'rvm',
+  :git => 'git@github.com:blt04/puppet-rvm.git'
+
