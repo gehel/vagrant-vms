@@ -2,11 +2,11 @@
 forge 'forge.puppetlabs.com'
 
 mod 'jenkins',
-  :git => 'git@github.com:gehel/puppet-jenkins.git'
-  :reg => 'plugin_config'
+  :git => 'git@github.com:gehel/puppet-jenkins.git',
+  :ref => 'plugin-config'
 
 mod 'jenkins_jobs',
-  :git => 'git@github.com:gehel/puppet-jenkins.git'
+  :git => 'git@github.com:gehel/puppet-jenkins_jobs.git'
 
 mod 'apt',
   :git => 'git@github.com:puppetlabs/puppetlabs-apt.git'
