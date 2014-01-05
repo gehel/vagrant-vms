@@ -129,4 +129,5 @@ jenkins_jobs::puppet_deploy { 'puppet-deploy-prod':
 # nice to have
 package { 'bash-completion': ensure => present, }
 
+# for development only
 service { 'iptables': ensure => stopped, }
