@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>manifests</name>
+	<comment></comment>
+	<projects>
+		<project>git</project>
+		<project>postgresql</project>
+		<project>puppet</project>
+		<project>puppi</project>
+		<project>r10k</project>
+		<project>rundeck</project>
+		<project>sudo</project>
+		<project>yum</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.cloudsmith.geppetto.pp.dsl.ui.modulefileBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.puppetlabs.geppetto.pp.dsl.ui.modulefileBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.xtext.ui.shared.xtextBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.cloudsmith.geppetto.pp.dsl.ui.puppetNature</nature>
+		<nature>com.puppetlabs.geppetto.pp.dsl.ui.puppetNature</nature>
+		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
+	</natures>
+</projectDescription>

@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant::Config.run do |config|
+
+  config.vm.box = "centos-6.4-nocm"
+  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210-nocm.box"
+  config.vm.host_name = "puppetmaster"
+
+  config.vm.network :hostonly, "10.11.12.3"
+
+  config.vm.provision :shell, :path => "files/puppetmaster_install.sh"
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = "manifests"
+    puppet.manifest_file  = "puppetmaster.pp"
+    puppet.module_path    = "modules"
+  end
+
+end

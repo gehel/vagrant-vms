@@ -1,0 +1,75 @@
+mod 'concat',
+  :git => 'https://github.com/puppetlabs/puppetlabs-concat.git'
+
+mod 'firewall',
+  :git => 'https://github.com/example42/puppet-firewall.git'
+
+mod 'git',
+  :git => 'https://github.com/example42/puppet-git.git'
+
+mod 'iptables',
+  :git => 'https://github.com/example42/puppet-iptables.git'
+
+mod 'java',
+  :git => 'https://github.com/example42/puppet-java.git'
+
+mod 'limits',
+  :git => 'https://github.com/example42/puppet-limits.git'
+
+mod 'logrotate',
+  :git => 'https://github.com/example42/puppet-logrotate.git'
+
+mod 'mcollective',
+  :git => 'https://github.com/example42/puppet-mcollective.git'
+
+mod 'monitor',
+  :git => 'https://github.com/example42/puppet-monitor.git'
+
+mod 'nrpe',
+  :git => 'https://github.com/example42/puppet-nrpe.git'
+
+mod 'ntp',
+  :git => 'https://github.com/example42/puppet-ntp.git'
+
+mod 'openntpd',
+  :git => 'https://github.com/example42/puppet-openntpd.git'
+
+mod 'openssh',
+  :git => 'https://github.com/example42/puppet-openssh.git'
+
+mod 'pe_gem',
+  :git => 'https://github.com/puppetlabs/puppetlabs-pe_gem.git'
+
+mod 'postgresql',
+  :git => 'https://github.com/example42/puppet-postgresql.git'
+
+mod 'puppet',
+  :git => 'https://github.com/example42/puppet-puppet.git'
+
+mod 'puppetdb',
+  :git => 'https://github.com/example42/puppet-puppetdb.git'
+
+mod 'puppi',
+  :git => 'https://github.com/example42/puppi.git'
+
+mod 'r10k',
+  :git => 'https://github.com/acidprime/r10k.git'
+
+mod 'rvm',
+  :git => 'https://github.com/example42/puppet-rvm.git'
+
+mod 'rundeck',
+  :git => 'https://github.com/gehel/puppet-rundeck.git'
+
+mod 'stdlib',
+  :git => 'https://github.com/puppetlabs/puppetlabs-stdlib.git'
+
+mod 'sudo',
+  :git => 'https://github.com/example42/puppet-sudo.git'
+
+mod 'wget',
+  :git => 'https://github.com/example42/puppet-wget.git'
+
+mod 'yum',
+  :git => 'https://github.com/example42/puppet-yum.git'
+
