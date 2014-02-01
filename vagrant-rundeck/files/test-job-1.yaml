@@ -1,0 +1,20 @@
+- id: 5afccac3-19cf-4a66-9311-7a18def7f299
+  project: test-project-1
+  name: test-job-1
+  description: Test Job
+  loglevel: INFO
+  uuid: 5afccac3-19cf-4a66-9311-7a18def7f299
+  sequence:
+    keepgoing: false
+    strategy: node-first
+    commands:
+    - exec: echo hello world
+      description: Greetings
+  nodefilters:
+    dispatch:
+      threadcount: 1
+      keepgoing: true
+      excludePrecedence: true
+      rankOrder: ascending
+    filter: 'name: *'
+
