@@ -66,7 +66,7 @@ puppet apply \
   /etc/puppet/environments/production/site/site.pp
 
 echo 'full puppet run to ensure server is completely created'
-sleep 30 2>&1
+sleep 30
 puppet agent -t
 
 echo 'Installation completed'
