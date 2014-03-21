@@ -1,0 +1,30 @@
+mod 'apache',
+  :git => 'git@github.com:example42/puppet-apache.git'
+
+mod 'apt',
+  :git => 'git@github.com:example42/puppet-apt.git'
+
+mod 'carbon',
+  :git => 'git@github.com:gehel/puppet-carbon.git'
+
+mod 'concat',
+  :git => 'git@github.com:puppetlabs/puppetlabs-concat.git'
+
+mod 'firewall',
+  :git => 'git@github.com:example42/puppet-firewall.git'
+
+mod 'graphite',
+  :git => 'git@github.com:gehel/puppet-graphite.git'
+
+mod 'icinga',
+  :git => 'git@github.com:example42/puppet-icinga.git'
+
+mod 'monitor',
+  :git => 'git@github.com:example42/puppet-monitor.git'
+
+mod 'puppi',
+  :git => 'git@github.com:example42/puppi.git'
+
+mod 'stdlib',
+  :git => 'git@github.com:puppetlabs/puppetlabs-stdlib.git'
+
