@@ -11,7 +11,7 @@ $carbon_instance_name = $::hostname ? {
   default     => undef,
 }
 
-$graphite_cluster_servers = '[ "graphite1:80", "graphite2:80" ]'
+$graphite_cluster_servers = '[ "192.168.50.21:80", "192.168.50.22:80" ]'
 
 $carbon_carbon_relay_enabled = true
 $carbon_relay_destinations = '192.168.50.21:2004:a, 192.168.50.22:2004:b'
@@ -42,7 +42,7 @@ node default {
   host { 'haproxy': ip => '192.168.50.200', }
 
 
-  $graphite_host = 'graphite1'
+  $graphite_host = 'haproxy'
   $graphite_port = '2013'
 
   class {'role::collectd':}

@@ -4,7 +4,12 @@ class role::graphite {
   package { 'python-pip': } ->
   class { '::graphite':
     secret_key  => 'toto',
-    server_name => $::hostname,
+    server_name => 'graphite',
+  }
+
+  file { '/etc/apache2/sites-enabled/000-default':
+    ensure => 'absent',
+    notify => $apache::manage_service_autorestart,
   }
 
 }
