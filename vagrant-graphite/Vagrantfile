@@ -16,17 +16,31 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/debian-73-x64-virtualbox-puppet.box"
 
-  config.vm.hostname = "graphite"
-
-  # Create a forwarded port mapping which allows access to a specific port
-  # within the machine from a port on the host machine. In the example below,
-  # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network :forwarded_port, guest: 80, host: 8080
+  config.vm.define "mysql" do |mysql|
+    mysql.vm.hostname = "mysql"
+    mysql.vm.network "private_network", ip: "192.168.50.10"
+  end
+  config.vm.define "graphite1" do |graphite1|
+    graphite1.vm.hostname = "graphite1"
+    graphite1.vm.network "private_network", ip: "192.168.50.21"
+  end
+  config.vm.define "graphite2" do |graphite2|
+    graphite2.vm.hostname = "graphite2"
+    graphite2.vm.network "private_network", ip: "192.168.50.22"
+  end
+  config.vm.define "memcached1" do |memcached1|
+    memcached1.vm.hostname = "memcached1"
+    memcached1.vm.network "private_network", ip: "192.168.50.31"
+  end
+  config.vm.define "haproxy" do |haproxy|
+    haproxy.vm.hostname = "haproxy"
+    haproxy.vm.network "private_network", ip: "192.168.50.200"
+  end
 
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path = "manifests"
-    puppet.module_path = "modules"
-    puppet.manifest_file = "graphite.pp"
+    puppet.module_path = [ "modules", "dist" ]
+    puppet.manifest_file = "site.pp"
   end
 
 end

@@ -1,0 +1,12 @@
+LoadPlugin mysql
+
+<Plugin mysql>
+	<Database <%= @graphite_db_name %>>
+		Host "mysql"
+		Port "3306"
+		User "<%= @graphite_db_user %>"
+		Password "<%= @graphite_db_password %>"
+		Database "<%= @graphite_db_name %>"
+		MasterStats true
+	</Database>
+</Plugin>
