@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>manifests</name>
+	<name>role</name>
 	<comment></comment>
 	<projects>
-		<project>apache</project>
-		<project>apt</project>
-		<project>carbon</project>
-		<project>collectd</project>
-		<project>graphite</project>
-		<project>haproxy</project>
-		<project>memcached</project>
-		<project>mysql</project>
-		<project>openssh</project>
-		<project>role</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -7,6 +7,9 @@ mod 'apt',
 mod 'carbon',
   :git => 'git@github.com:gehel/puppet-carbon.git'
 
+mod 'collectd',
+  :git => 'git@github.com:example42/puppet-collectd.git'
+
 mod 'concat',
   :git => 'git@github.com:puppetlabs/puppetlabs-concat.git'
 
@@ -16,15 +19,33 @@ mod 'firewall',
 mod 'graphite',
   :git => 'git@github.com:gehel/puppet-graphite.git'
 
+mod 'haproxy',
+  :git => 'git@github.com:example42/puppet-haproxy.git'
+
 mod 'icinga',
   :git => 'git@github.com:example42/puppet-icinga.git'
 
+mod 'iptables',
+  :git => 'git@github.com:example42/puppet-iptables.git'
+
+mod 'memcached',
+  :git => 'git@github.com:example42/puppet-memcached.git'
+
+mod 'mysql',
+  :git => 'git@github.com:example42/puppet-mysql.git'
+
 mod 'monitor',
   :git => 'git@github.com:example42/puppet-monitor.git'
+
+mod 'openssh',
+  :git => 'git@github.com:example42/puppet-openssh.git'
 
 mod 'puppi',
   :git => 'git@github.com:example42/puppi.git'
 
 mod 'stdlib',
   :git => 'git@github.com:puppetlabs/puppetlabs-stdlib.git'
+
+mod 'stdmod',
+  :git => 'git@github.com:stdmod/stdmod.git'
 
