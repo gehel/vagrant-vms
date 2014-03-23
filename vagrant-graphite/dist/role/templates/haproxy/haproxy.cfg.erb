@@ -1,0 +1,49 @@
+global
+	log /dev/log	local0
+	log /dev/log	local1 notice
+	chroot /var/lib/haproxy
+	user haproxy
+	group haproxy
+	daemon
+
+defaults
+	log	global
+	mode	http
+	option	httplog
+	option	dontlognull
+        contimeout 5000
+        clitimeout 50000
+        srvtimeout 50000
+	errorfile 400 /etc/haproxy/errors/400.http
+	errorfile 403 /etc/haproxy/errors/403.http
+	errorfile 408 /etc/haproxy/errors/408.http
+	errorfile 500 /etc/haproxy/errors/500.http
+	errorfile 502 /etc/haproxy/errors/502.http
+	errorfile 503 /etc/haproxy/errors/503.http
+	errorfile 504 /etc/haproxy/errors/504.http
+
+listen graphite 0.0.0.0:80
+    mode http
+    stats enable
+    stats uri /haproxy?stats
+    stats realm Strictly\ Private
+    stats auth admin:admin
+    balance roundrobin
+    option httpclose
+    option forwardfor
+    server graphite1 192.168.50.21:80 check
+    server graphite2 192.168.50.22:80 check
+
+listen carbon_relay_line 0.0.0.0:2013
+    mode tcp
+    option tcplog
+    balance leastconn
+    server graphite1 192.168.50.21:2013 check
+    server graphite1 192.168.50.22:2013 check
+
+listen carbon_relay_pickle 0.0.0.0:2014
+    mode tcp
+    option tcplog
+    balance leastconn
+    server graphite1 192.168.50.21:2014 check
+    server graphite1 192.168.50.22:2014 check
