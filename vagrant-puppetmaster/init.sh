@@ -2,7 +2,7 @@
 
 LOG=/var/log/cloud-user-script.log
 PUPPET_INTERNAL_NAME=puppet.int.aws.ledcom.ch
-PUPPET_EXTERNAL_NAME=puppet.aws.ledcom.ch
+PUPPET_EXTERNAL_NAME=puppet.home.ledcom.ch
 
 echo 'create a few needed files'
 
